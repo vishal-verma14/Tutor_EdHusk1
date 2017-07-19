@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgContent"
+    tools:context="com.example.vishal.tutor_edhusk.Expertise_directory.Expertise_academics">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgContent"
+                android:text="Pre-Primary"
+                android:drawableRight="@drawable/arrows"
+
+                android:drawableLeft="@drawable/pre_primary"
+                android:id="@+id/P_P_EA"
+            />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgContent"
+                android:drawableStart="@drawable/class1_5"
+                android:drawableEnd="@drawable/arrows"
+
+                android:id="@+id/C_1_5_EA"
+
+                android:text="Class 1-5"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgContent"
+                android:drawableStart="@drawable/class6_10"
+                android:drawableEnd="@drawable/arrows"
+
+                android:id="@+id/C_6_10_EA"
+
+                android:text="Class 6-10"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgContent"
+                android:drawableEnd="@drawable/arrows"
+
+                android:drawableStart="@drawable/sinior"
+                android:id="@+id/C_11_EA"
+
+                android:text="Class 11"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgContent"
+                android:drawableEnd="@drawable/arrows"
+
+                android:drawableStart="@drawable/sinior"
+                android:id="@+id/C_12_EA"
+
+                android:text="class 12"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

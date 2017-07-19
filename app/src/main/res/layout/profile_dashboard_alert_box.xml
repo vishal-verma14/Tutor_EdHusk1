@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/colorPrimary"
+              android:layout_width="400dp"
+              android:layout_height="wrap_content"
+              android:weightSum="1">
+
+
+        <ImageView
+            android:id="@+id/pd_imge_alert_sub"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="15dp"
+            android:background="@mipmap/edhusk_logo"
+            />
+
+        <TextView
+            android:id="@+id/alert_text_pd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Please fill required field "
+            android:textColor="#fff"
+            android:textSize="20dp"
+
+            android:layout_alignBottom="@+id/pd_imge_alert_sub"
+            android:layout_toEndOf="@+id/pd_imge_alert_sub"
+            android:layout_marginBottom="17dp"/>
+
+        <Button
+            android:id="@+id/alert_button_dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#538978"
+            android:text="OK"
+            android:textColor="#fff"
+            android:layout_below="@+id/pd_imge_alert_sub"
+            android:layout_alignParentStart="true"/>
+
+
+
+
+</RelativeLayout>
+
+

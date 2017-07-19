@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vishal.tutor_edhusk.User_information_sub.Qualification">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:id="@+id/frameLayout_quli"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="Qualification"
+            android:textColor="#fff"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/qualification_ui_icon"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout_quli"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentEnd="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Education Qualification"
+                android:drawableLeft="@drawable/ed_ui_qualification"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Degree"
+                android:drawableLeft="@drawable/degree_ui_qualification_icon"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Working Status"
+                android:drawableLeft="@drawable/status_ui_qualification"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"/>
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/yof_ui_qualification_icon"
+                android:text="Year Of Experence"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Collage Name"
+                android:drawableLeft="@drawable/collage_ui_qualification_icon"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passing Year"
+                android:drawableLeft="@drawable/py_ui_qualification_icon"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="University"
+                android:drawableLeft="@drawable/university_ui_qualification_icon"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Percentage"
+                android:drawableLeft="@drawable/percentage_ui_qualification_icon"
+                android:layout_marginTop="@dimen/profile_text_top"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="35dp"/>
+
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Submit"
+    android:background="@color/colorPrimary"
+    android:textColor="#fff"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgContent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vishal.tutor_edhusk.Expertise_directory.Expertise_hobbies_skill">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/bgContent"
+          android:id="@+id/A_C_hobbies"
+          android:text="Art and Craft"
+          android:drawableLeft="@drawable/a_and_craft"
+          android:drawableRight="@drawable/arrows"
+          />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgContent"
+android:id="@+id/D_hobbies"
+            android:drawableLeft="@drawable/dance"
+            android:drawableRight="@drawable/arrows"
+            android:text="Dance"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgContent"
+android:id="@+id/C_B_hobbies"
+            android:drawableLeft="@drawable/c_b_img"
+            android:drawableRight="@drawable/arrows"
+            android:text="Computer Basics"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgContent"
+            android:id="@+id/c_hobbies"
+            android:drawableLeft="@drawable/cooking"
+            android:drawableRight="@drawable/arrows"
+            android:text="Cooking"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgContent"
+android:id="@+id/L_hobbies"
+            android:drawableLeft="@drawable/language"
+            android:drawableRight="@drawable/arrows"
+            android:text="Language"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgContent"
+android:id="@+id/I_hobbies"
+            android:drawableLeft="@drawable/instrument"
+            android:drawableRight="@drawable/arrows"
+            android:text="Instrument"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgContent"
+android:id="@+id/V_hobbies"
+            android:drawableLeft="@drawable/vocal"
+            android:drawableRight="@drawable/arrows"
+            android:text="Vocals"/>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

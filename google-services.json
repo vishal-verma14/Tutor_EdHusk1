@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "708861683873",
+    "firebase_url": "https://tutor-edhusk.firebaseio.com",
+    "project_id": "tutor-edhusk",
+    "storage_bucket": "tutor-edhusk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708861683873:android:1190a9e3bf196b29",
+        "android_client_info": {
+          "package_name": "com.example.vishal.tutor_edhusk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708861683873-vuni4etav66qdims4402pvd2697cp692.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vishal.tutor_edhusk",
+            "certificate_hash": "811f1c9daae5c419757b8e3438843d80ed5b314c"
+          }
+        },
+        {
+          "client_id": "708861683873-mdmlrd4nfpml2hchbcv3h3qceec988e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3dKLmd13UOGn1wIE94ndyW66g2wg6tx0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708861683873-mdmlrd4nfpml2hchbcv3h3qceec988e8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

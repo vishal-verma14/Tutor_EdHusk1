@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgContent"
+    tools:context="com.example.vishal.tutor_edhusk.Expertise_directory.Expertise_academics_sub.Class_11_academics_expertise">
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/C_11_ARTS"
+       android:background="@color/bgContent"
+       android:text="Arts"
+       android:layout_marginTop="@dimen/profile_text_top"
+       android:layout_marginLeft="15dp"
+       android:drawableRight="@drawable/arrows"
+       android:drawablePadding="35dp"
+       android:drawableLeft="@drawable/arts"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/C_11_SCIENCE"
+        android:background="@color/bgContent"
+        android:text="Science"
+        android:layout_marginTop="@dimen/profile_text_top"
+        android:layout_marginLeft="15dp"
+        android:drawablePadding="35dp"
+        android:drawableRight="@drawable/arrows"
+        android:drawableLeft="@drawable/science"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/C_11_COMMERCE"
+        android:background="@color/bgContent"
+        android:text="Commerce"
+        android:layout_marginTop="@dimen/profile_text_top"
+        android:layout_marginLeft="15dp"
+        android:drawablePadding="35dp"
+        android:drawableRight="@drawable/arrows"
+        android:drawableLeft="@drawable/commerce"/>
+
+</LinearLayout>

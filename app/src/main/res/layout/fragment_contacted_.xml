@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.example.vishal.tutor_edhusk.Fragment.Contacted_Fragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contacted_listview"
+       android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:divider="#fff"
+        android:background="@color/bgBackSideColor"
+        ></android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
