@@ -28,13 +28,12 @@ public class Contacted_Fragment extends Fragment {
 
     int Position,pos;
     View view;
-    RecyclerView listView;
+
     RecyclerView  recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     DatabaseReference db;
     ArrayList<String> list = new ArrayList<>();
-    ArrayAdapter<String> studeny_adapter;
 
 
 

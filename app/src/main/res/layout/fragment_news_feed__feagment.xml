@@ -3,7 +3,7 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-
+android:background="@color/bgContent"
   tools:context="com.example.vishal.tutor_edhusk.Fragment.Notification_fragment"
     android:orientation="vertical">
 
@@ -12,10 +12,11 @@ android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_margin="10dp"
+
         android:clipChildren="false"
         android:clipToPadding="false"
         android:dividerHeight="4dp"
+        android:divider="@color/bgContent"
         tools:context=".Landing_page" />
 </LinearLayout>
 

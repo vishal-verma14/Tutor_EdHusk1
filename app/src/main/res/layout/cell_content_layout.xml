@@ -2,10 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-              android:layout_margin="10dp"
+    android:layout_margin="10dp"
     android:orientation="vertical"
-
-              android:visibility="gone"
+    android:visibility="gone"
     >
 
 
@@ -17,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="152dp"
         android:layout_weight="1"
-        android:background="#eb5e26"
+        android:background="#14505b"
         android:paddingBottom="20dp"
         android:paddingEnd="20dp"
         android:orientation="vertical"
@@ -25,11 +24,37 @@
         android:paddingTop="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bgContent"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender : "
+            android:textColor="@color/bgContent"
+            android:id="@+id/textView4"
+            android:layout_above="@+id/Subject_content"
+            android:layout_toStartOf="@+id/Board_content"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender_content"
+            android:textColor="@color/bgContent"
+            android:text="gender"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignStart="@+id/Board_content" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name :"
+        android:textColor="@color/bgContent"
         android:id="@+id/content_name"
         android:layout_margin="5dp"
         />
@@ -39,6 +64,8 @@
         android:id="@+id/content_name_text"
         android:layout_marginStart="100dp"
         android:text="name"
+        android:textColor="@color/bgContent"
+
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
@@ -49,6 +76,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/address_content"
             android:text="Address :"
+            android:textColor="@color/bgContent"
+
             android:layout_below="@id/content_name"
             android:layout_margin="5dp"
             />
@@ -57,6 +86,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="address"
+            android:textColor="@color/bgContent"
+
             android:id="@+id/address_content_text"
             android:layout_marginStart="100dp"
             android:layout_marginLeft="5dp"
@@ -68,6 +99,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Class :"
+            android:textColor="@color/bgContent"
+
             android:id="@+id/class_content"
             android:layout_below="@+id/address_content"
             android:layout_margin="5dp"/>
@@ -77,6 +110,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/class_content_text"
             android:text="class"
+            android:textColor="@color/bgContent"
+
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
@@ -87,6 +122,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Subject"
+            android:textColor="@color/bgContent"
+
             android:layout_margin="5dp"
             android:layout_below="@+id/class_content"
             android:id="@+id/Subject_content"
@@ -100,41 +137,233 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="100dp"
             android:layout_alignTop="@+id/Subject_content"
-
+            android:textColor="@color/bgContent"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Board :"
+    android:id="@+id/board_name"
+    android:textColor="@color/bgContent"
+    android:layout_alignBaseline="@+id/Subject_content_text"
+    android:layout_alignBottom="@+id/Subject_content_text"
+    android:layout_toEndOf="@+id/address_content_text"
+    android:layout_alignStart="@+id/textView4" />
 
 
+
+        <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/Board_content"
+            android:text="board name"
+            android:textColor="@color/bgContent"
+            android:layout_alignBaseline="@+id/board_name"
+            android:layout_alignBottom="@+id/board_name"
+            android:layout_alignParentEnd="true" />
+
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/bgContent"
+    android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 
 
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="152dp"
         android:layout_weight="1"
-        android:background="#f1b9b9"
+        android:background="#14505b"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="15dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/bgContent" />
+
+        <TextView
+            android:id="@+id/day_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:text="Days :"
+            android:textColor="@color/bgContent" />
+
+        <TextView
+            android:id="@+id/days_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="5dp"
+            android:text="days"
+            android:textColor="@color/bgContent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/day_logo"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Location :"
+
+            android:textColor="@color/bgContent" />
+
+        <TextView
+            android:id="@+id/location_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignStart="@+id/days_content"
+            android:text="Location"
+            android:textColor="@color/bgContent" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/travel_content"
+            android:layout_alignBottom="@+id/travel_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Travel :"
+            android:textColor="@color/bgContent" />
+
+        <TextView
+            android:id="@+id/travel_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="5dp"
+
+            android:text="travel"
+            android:textColor="@color/bgContent" />
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignEnd="@+id/textView6"
+            android:layout_below="@+id/textView6"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Slots :"
+            android:textColor="@color/bgContent" />
+
+        <TextView
+            android:id="@+id/slots_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/textView7"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignEnd="@+id/travel_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="slots"
+            android:textColor="@color/bgContent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Type :"
+            android:textColor="@color/bgContent"
+            android:layout_marginStart="42dp"
+            android:layout_alignBaseline="@+id/slots_content"
+            android:layout_alignBottom="@+id/slots_content"
+            android:layout_toEndOf="@+id/location_content" />
+
+        <TextView
+            android:id="@+id/type_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/textView2"
+            android:text="type"
+            android:textColor="@color/bgContent" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bgContent" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:layout_weight="1"
+        android:background="#14505b"
         android:paddingBottom="20dp"
         android:paddingEnd="20dp"
         android:paddingStart="15dp"
         android:paddingTop="20dp">
 
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bgContent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/imageView13" />
 
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Price range"
+         android:textSize="25dp"
+         android:textColor="@color/bgContent"
+         android:id="@+id/price_range_content"
+         android:layout_below="@+id/imageView9"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="16dp" />
 
-    </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price_range_content"
+            android:background="@color/bgContent"
+            android:layout_above="@+id/imageView13" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="152dp"
-        android:layout_weight="1"
-        android:background="#fae0e0"
-        android:paddingBottom="20dp"
-        android:paddingEnd="20dp"
-        android:paddingStart="15dp"
-        android:paddingTop="20dp">
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bgContent"
+            android:layout_alignParentTop="true"
+            android:id="@+id/imageView9" />
 
 
     </RelativeLayout>
@@ -146,11 +375,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/btnRequest"
-            android:padding="10dp"
             android:text="@string/request_btn_text"
             android:textAlignment="center"
             android:textColor="@color/mainTextColor"
             android:textSize="20sp" />
+
 
 
     </LinearLayout>

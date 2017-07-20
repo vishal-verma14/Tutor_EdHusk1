@@ -5,6 +5,6 @@ package com.example.vishal.tutor_edhusk.Model;
  */
 
 public class Api_data {
-   public static final String JsonUrl = "https://api.myjson.com/bins/1cmyj3";
+   public static final String JsonUrl = "https://api.myjson.com/bins/905k7";
 
 }

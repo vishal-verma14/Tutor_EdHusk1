@@ -45,9 +45,9 @@ public class student_data {
     private String Price_Range;
     private String Lat;
     private String Long;
-    private List<?> subjects;
-    private List<Integer> days;
-    private List<Integer> slots;
+    private String subjects;
+    private String days;
+    private String slots;
 
 
     public student_data(){}
@@ -113,7 +113,23 @@ public class student_data {
         this.Name = Name;
     }
 
+    public String getContentName() {
+        return Name;
+    }
+
+    public void setContentName(String Name) {
+        this.Name = Name;
+    }
+
     public String getStandard() {
+        return Standard;
+    }
+
+    public void setContentStandard(String Standard) {
+        this.Standard = Standard;
+    }
+
+    public String getContentStandard() {
         return Standard;
     }
 
@@ -128,6 +144,15 @@ public class student_data {
     public void setAddress(String Address) {
         this.Address = Address;
     }
+
+    public String getContentAddress() {
+        return Address;
+    }
+
+    public void ContentsetAddress(String Address) {
+        this.Address = Address;
+    }
+
 
     public int getId() {
         return id;
@@ -153,6 +178,14 @@ public class student_data {
         this.Price_Range = Price_Range;
     }
 
+    public String getContentPrice_Range() {
+        return Price_Range;
+    }
+
+    public void setContentPrice_Range(String Price_Range) {
+        this.Price_Range = Price_Range;
+    }
+
     public String getLat() {
         return Lat;
     }
@@ -169,27 +202,36 @@ public class student_data {
         this.Long = Long;
     }
 
-    public List<?> getSubjects() {
+    public String getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(List<?> subjects) {
+    public void setSubjects(String subjects) {
         this.subjects = subjects;
     }
 
-    public List<Integer> getDays() {
+
+    public String getContentSubjects() {
+        return subjects;
+    }
+
+    public void setContentSubjects(String subjects) {
+        this.subjects = subjects;
+    }
+
+    public String getDays() {
         return days;
     }
 
-    public void setDays(List<Integer> days) {
+    public void setDays(String days) {
         this.days = days;
     }
 
-    public List<Integer> getSlots() {
+    public String getSlots() {
         return slots;
     }
 
-    public void setSlots(List<Integer> slots) {
+    public void setSlots(String slots) {
         this.slots = slots;
     }
 }

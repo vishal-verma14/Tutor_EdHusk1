@@ -38,6 +38,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.StringJoiner;
 
 public class NewsFeed_Feagment extends Fragment {
 
@@ -179,28 +180,185 @@ public class NewsFeed_Feagment extends Fragment {
 
                         student_data item = new student_data();
 
-                        ArrayList<String> temp =  new ArrayList<String>();
+                        //id
+                        item.setId(object.getInt("id"));
+                        Log.d("id",object.getString("id"));
 
+
+                        //name
                         item.setName(object.getString("Name"));
+                        Log.d("name",object.getString("Name"));
 
-                            JSONArray tagname =  object.getJSONArray("slots");
-                        for (int j = 0;j<tagname.length();j++){
-                            temp.add(tagname.getString(j));
-                            Log.d("tagame",tagname.getString(j));
-                            Log.d("tagndsaame",object.getString("Name"));
+                        //contentname
+                        item.setContentName(object.getString("Name"));
+                        Log.d("name",object.getString("Name"));
+
+
+                        //slots
+
+                        ArrayList<String> slots_list =  new ArrayList<String>();
+                        JSONArray slotsArray =  object.getJSONArray("slots");
+
+
+                        for (int j = 0;j<slotsArray.length();j++){
+
+                            slots_list.add(slotsArray.getString(j));
+
+//                            Log.d("slots",slotsArray.getString(j));
 
                         }
 
-//                        JSONObject jsonObject = new JSONObject(data);
-//                        JSONArray friends = jsonObject.getJSONArray("slots");
-//                        for (int j=0; j<friends.length(); ++j){
-//                            JSONObject currentFriend = friends.getJSONObject(j);
-//                            temp.add(currentFriend.getString(String.valueOf(j)));;
-//                            Log.d("tagame",currentFriend.getString(String.valueOf(j)));
+
+                    String slot = "";
+                        for (int k=0;k < slotsArray.length();k++)
+                        {
+                            slot += slots_list.get(k) + ",";
+                        }
+                        item.setSlots(slot);
+
+                        Log.d("Slots",slot);
+
+
+                        //days
+                        ArrayList<String> days_list =  new ArrayList<String>();
+                        JSONArray daysArray =  object.getJSONArray("days");
+
+
+                        for (int j = 0;j<daysArray.length();j++){
+
+                            days_list.add(daysArray.getString(j));
+
+//                            Log.d("slots",slotsArray.getString(j));
+
+                        }
+
+
+                        String days = "";
+                        for (int k=0;k < daysArray.length();k++)
+                        {
+                            days += days_list.get(k) + ",";
+                        }
+                        item.setDays(days);
+                        Log.d("days",days);
+
+
+
+
+                        //subject
+
+                        //days
+                        ArrayList<String> subject_list =  new ArrayList<String>();
+                        JSONArray subjectArray =  object.getJSONArray("subjects");
+
+
+                        for (int j = 0;j<subjectArray.length();j++){
+
+                            subject_list.add(subjectArray.getString(j));
+
+//                            Log.d("slots",slotsArray.getString(j));
+
+                        }
+
+
+                        String subject = "";
+                        for (int k=0;k < subjectArray.length();k++)
+                        {
+                            subject += subject_list.get(k) + ",";
+                        }
+                        item.setSubjects(subject);
+                        Log.d("subject",subject);
+
+
+                        item.setContentSubjects(subject);
+
+
+//
+//                        ArrayList<String> subject_list =  new ArrayList<String>();
+//
+//
+//                        JSONArray subject_array =  object.getJSONArray("subjects");
+//
+//                        for (int l = 0;l<subject_array.length();l++){
+//
+//                            subject_list.add(slotsArray.getString(l));
+//
+////                            Log.d("slots",slotsArray.getString(j));
+//
+//                        }
+//
+//                        for (int k=0;k < subject_array.length();k++)
+//                        {
+//                            Log.i("Value of element "+object.getString("subjects") + "Index" + k,subject_list.get(k));
 //                        }
 
 
+
+
+                        //location
                         item.setLocation(object.getString("Location"));
+                        Log.d("Location",object.getString("Location"));
+
+                        //Board
+                        item.setBoard(object.getString("Board"));
+                        Log.d("Board",object.getString("Board"));
+
+
+                        //Type
+                        item.setType(object.getString("Type"));
+                        Log.d("Type",object.getString("Type"));
+
+
+                        //Travel
+                        item.setTravel(object.getString("Travel"));
+                        Log.d("Travel",object.getString("Travel"));
+
+
+                        //Gender
+                        item.setGender(object.getString("Gender"));
+                        Log.d("Gender",object.getString("Gender"));
+
+                        //Standard
+                        item.setStandard(object.getString("Standard"));
+                        Log.d("Standard",object.getString("Standard"));
+
+
+                        //ContentStandard
+                        item.setContentStandard(object.getString("Standard"));
+
+                        //Address
+                        item.setAddress(object.getString("Address"));
+                        Log.d("Address",object.getString("Address"));
+
+
+                        //ContentAddress
+                        item.ContentsetAddress(object.getString("Address"));
+
+
+
+
+
+
+                        //Created_At
+                        item.setCreated_At(object.getString("Created_At"));
+                        Log.d("Created_At",object.getString("Created_At"));
+
+
+                        //Price_Range
+                        item.setPrice_Range(object.getString("Price_Range"));
+                        Log.d("Price_Range",object.getString("Price_Range"));
+
+                        //Price_Range
+                        item.setContentPrice_Range(object.getString("Price_Range"));
+                        Log.d("Price_Range",object.getString("Price_Range"));
+
+                        //Lat
+                        item.setLat(object.getString("Lat"));
+                        Log.d("Lat",object.getString("Lat"));
+
+                        //Lat
+                        item.setLong(object.getString("Long"));
+                        Log.d("Long",object.getString("Long"));
+
 
 
                         student_list.add(item);

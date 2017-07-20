@@ -30,6 +30,7 @@ public class FirebaseAdapter extends RecyclerView.Adapter<FirebaseAdapter.ViewHo
 
     @Override
     public FirebaseAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.my_application_cardview,parent,false);
 
         ViewHolder viewHolder =  new ViewHolder(v);
