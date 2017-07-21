@@ -8,7 +8,7 @@ import java.util.List;
  * Created by vishal on 19/06/17.
  */
 
-public class student_data {
+public class Student_data {
 
 
 
@@ -32,25 +32,44 @@ public class student_data {
      * Long : 75.735393
      */
 
-    private String Board;
-    private String Type;
-    private String Travel;
-    private String Location;
-    private String Gender;
-    private String Name;
-    private String Standard;
-    private String Address;
-    private int id;
-    private String Created_At;
-    private String Price_Range;
-    private String Lat;
-    private String Long;
-    private String subjects;
-    private String days;
-    private String slots;
+        private String Board;
+        private String Type;
+        private String Travel;
+        private String Location;
+        private String Gender;
+        private String Name;
+        private String Standard;
+        private String Address;
+        private int id;
+        private String Created_At;
+        private String Price_Range;
+        private String Lat;
+        private String Long;
+        private String subjects;
+        private String days;
+        private String slots;
 
+    public String getStatus() {
+        return status;
+    }
 
-    public student_data(){}
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private String status;
+
+        public Student_data(String name, String standard, String address, int id, String price_Range, String subjects, String status) {
+            this.Name = name;
+            this.Standard = standard;
+            this.Address = address;
+            this.id = id;
+            this.Price_Range = price_Range;
+            this.subjects = subjects;
+            this.status = status;
+        }
+
+    public Student_data(){}
 
 
 
@@ -125,6 +144,10 @@ public class student_data {
         return Standard;
     }
 
+    public void setStandard(String Standard) {
+        this.Standard = Standard;
+    }
+
     public void setContentStandard(String Standard) {
         this.Standard = Standard;
     }
@@ -133,9 +156,6 @@ public class student_data {
         return Standard;
     }
 
-    public void setStandard(String Standard) {
-        this.Standard = Standard;
-    }
 
     public String getAddress() {
         return Address;

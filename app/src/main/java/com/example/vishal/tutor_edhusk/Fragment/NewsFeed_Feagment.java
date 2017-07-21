@@ -2,9 +2,7 @@ package com.example.vishal.tutor_edhusk.Fragment;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SyncStats;
 import android.net.ParseException;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,9 +17,8 @@ import android.widget.Toast;
 
 import com.example.vishal.tutor_edhusk.Adapter.FoldingListAdapter;
 import com.example.vishal.tutor_edhusk.Model.Api_data;
-import com.example.vishal.tutor_edhusk.Model.student_data;
+import com.example.vishal.tutor_edhusk.Model.Student_data;
 import com.example.vishal.tutor_edhusk.R;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ramotion.foldingcell.FoldingCell;
@@ -38,7 +35,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.StringJoiner;
 
 public class NewsFeed_Feagment extends Fragment {
 
@@ -48,7 +44,7 @@ public class NewsFeed_Feagment extends Fragment {
     SharedPreferences sharedPreferences;
 
 
-    public ArrayList<student_data> student_list = new ArrayList<student_data>();
+    public ArrayList<Student_data> student_list = new ArrayList<Student_data>();
     public FoldingListAdapter adapter;
     View view;
     ListView listView;
@@ -107,15 +103,33 @@ public class NewsFeed_Feagment extends Fragment {
             @Override
             public void onClick(View v) {
 
+//                int student_name  =  student_list.get(Position).getId();
+                int student_id  =  student_list.get(Position).getId();
                 String student_name  =  student_list.get(Position).getName();
+                String student_address  =  student_list.get(Position).getAddress();
+                String student_standard  =  student_list.get(Position).getStandard();
+                String student_price_range  =  student_list.get(Position).getPrice_Range();
+                String student_subject  =  student_list.get(Position).getSubjects();
+
+
 
                 student_list.remove(Position);
                 adapter.notifyDataSetChanged();
 
-                if (student_name != null){
-                    mDatabase.child(userId).child("Name").setValue(student_name);
-                    mDatabase.child(userId).child("Type").setValue(tutor_name);
-                }
+
+                    //mDatabase.child(userId).child("id").setValue(student_name);
+//                    mDatabase.child(userId).child("Type").setValue(tutor_name);
+
+                mDatabase.child(userId).child("id").setValue(student_id);
+                mDatabase.child(userId).child("name").setValue(student_name);
+                mDatabase.child(userId).child("address").setValue(student_address);
+                mDatabase.child(userId).child("standard").setValue(student_standard);
+                mDatabase.child(userId).child("Price_Range").setValue(student_price_range);
+                mDatabase.child(userId).child("subjects").setValue(student_subject);
+                mDatabase.child(userId).child("status").setValue("Pending");
+
+
+
                 System.out.println(Position + 1);
                 newsFeed_feagment_transfer.setPosition(Position + 1);
                 System.out.println(Position + 1 + "start");
@@ -178,7 +192,7 @@ public class NewsFeed_Feagment extends Fragment {
                     for (int i = 0; i < jarray.length(); i++) {
                         JSONObject object = jarray.getJSONObject(i);
 
-                        student_data item = new student_data();
+                        Student_data item = new Student_data();
 
                         //id
                         item.setId(object.getInt("id"));
@@ -332,10 +346,6 @@ public class NewsFeed_Feagment extends Fragment {
 
                         //ContentAddress
                         item.ContentsetAddress(object.getString("Address"));
-
-
-
-
 
 
                         //Created_At

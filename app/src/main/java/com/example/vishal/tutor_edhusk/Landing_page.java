@@ -2,10 +2,7 @@ package com.example.vishal.tutor_edhusk;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -15,29 +12,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.vishal.tutor_edhusk.Contacted_student.MyApplication;
+import com.example.vishal.tutor_edhusk.Contacted_student.Selected_Application;
 import com.example.vishal.tutor_edhusk.Fragment.Contacted_Fragment;
 import com.example.vishal.tutor_edhusk.Fragment.NewsFeed_Feagment;
 import com.example.vishal.tutor_edhusk.Fragment.Notification_fragment;
@@ -196,7 +179,7 @@ public class Landing_page extends AppCompatActivity
 
         } else if (id == R.id.account) {
 
-            startActivity(new Intent(Landing_page.this, MyApplication.class));
+            startActivity(new Intent(Landing_page.this, Selected_Application.class));
 
 
         } else if (id == R.id.history) {

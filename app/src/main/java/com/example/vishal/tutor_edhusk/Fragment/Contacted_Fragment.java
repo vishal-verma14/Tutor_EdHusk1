@@ -10,11 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.example.vishal.tutor_edhusk.Adapter.FirebaseAdapter;
-import com.example.vishal.tutor_edhusk.Adapter.FoldingListAdapter;
-import com.example.vishal.tutor_edhusk.Model.student_data;
+import com.example.vishal.tutor_edhusk.Model.Selected_student;
+import com.example.vishal.tutor_edhusk.Model.Student_data;
+import com.example.vishal.tutor_edhusk.Model.contacted_data;
 import com.example.vishal.tutor_edhusk.R;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -23,17 +23,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Contacted_Fragment extends Fragment {
 
     int Position,pos;
     View view;
-
+    RecyclerView listView;
     RecyclerView  recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     DatabaseReference db;
-    ArrayList<String> list = new ArrayList<>();
+    ArrayList<contacted_data> data;
+    ArrayAdapter<String> studeny_adapter;
 
 
 
@@ -56,7 +58,7 @@ public class Contacted_Fragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_contacted_, container, false);
@@ -67,7 +69,12 @@ public class Contacted_Fragment extends Fragment {
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new FirebaseAdapter(list,getActivity());
+        data =  new ArrayList<contacted_data>();
+
+
+
+
+        adapter = new FirebaseAdapter(data);
         recyclerView.setAdapter(adapter);
 
 //
@@ -80,9 +87,8 @@ public class Contacted_Fragment extends Fragment {
 
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                @SuppressWarnings("ConstantConditions") String value = dataSnapshot.getValue(student_data.class).getName();
-                list.add(value);
-                adapter.notifyDataSetChanged();
+                fetchData(dataSnapshot);
+
 
             }
 
@@ -91,16 +97,19 @@ public class Contacted_Fragment extends Fragment {
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                fetchData(dataSnapshot);
 
             }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
+                fetchData(dataSnapshot);
 
             }
 
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                fetchData(dataSnapshot);
 
             }
 
@@ -136,6 +145,22 @@ public class Contacted_Fragment extends Fragment {
         }
     }
 
+
+    private void fetchData(DataSnapshot dataSnapshot)
+    {
+        @SuppressWarnings("ConstantConditions") String name = dataSnapshot.getValue(Student_data.class).getName();
+        @SuppressWarnings("ConstantConditions") String Standard = dataSnapshot.getValue(Student_data.class).getStandard();
+        @SuppressWarnings("ConstantConditions") String address = dataSnapshot.getValue(Student_data.class).getAddress();
+
+        @SuppressWarnings("ConstantConditions") int id = dataSnapshot.getValue(Student_data.class).getId();
+        @SuppressWarnings("ConstantConditions") String Price_Range = dataSnapshot.getValue(Student_data.class).getPrice_Range();
+        @SuppressWarnings("ConstantConditions") String subjects = dataSnapshot.getValue(Student_data.class).getSubjects();
+        @SuppressWarnings("ConstantConditions") String status = dataSnapshot.getValue(Student_data.class).getStatus();
+
+            data.add(new contacted_data(name, Standard, address, id, Price_Range, subjects, status));
+            adapter.notifyDataSetChanged();
+
+    }
 
 }
 

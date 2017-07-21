@@ -160,10 +160,10 @@ public class my_application_detail extends AppCompatActivity {
 //
 //                    atstatus.setName(dataSnapshot.child ("Name").getValue(Attendence_status.class).getName()); //set the name
 
-                    s[0] = dataSnapshot.child ("Name").getValue ().toString ();
-                    status[0] = dataSnapshot.child ("Status").getValue ().toString ();
-
-                    atstatus.setStatus (status[0]);
+//                    s[0] = dataSnapshot.child ("Name").getValue ().toString ();
+//                    status[0] = dataSnapshot.child ("Status").getValue ().toString ();
+//
+//                    atstatus.setStatus (status[0]);
 
 //                    Toast.makeText (getApplicationContext (), s[0],Toast.LENGTH_LONG).show ();
 //                    Toast.makeText (getApplicationContext (), status[0],Toast.LENGTH_LONG).show ();

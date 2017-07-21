@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.vishal.tutor_edhusk.Model.student_data;
+import com.example.vishal.tutor_edhusk.Model.Student_data;
 import com.example.vishal.tutor_edhusk.R;
 import com.ramotion.foldingcell.FoldingCell;
 
@@ -20,21 +20,21 @@ import java.util.HashSet;
  * Created by vishal on 19/06/17.
  */
 
-public class FoldingListAdapter extends ArrayAdapter<student_data> {
+public class FoldingListAdapter extends ArrayAdapter<Student_data> {
 
-    ArrayList<student_data> student_list;
+    ArrayList<Student_data> student_list;
     private HashSet<Integer> unfoldedIndexes = new HashSet<>();
     private View.OnClickListener defaultRequestBtnClickListener;
 
 
-    public FoldingListAdapter(Context context, int resource, ArrayList<student_data> objects) {
+    public FoldingListAdapter(Context context, int resource, ArrayList<Student_data> objects) {
         super(context, resource, objects);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        student_data data = getItem(position);
+        Student_data data = getItem(position);
 
         FoldingCell cell = (FoldingCell) convertView;
 
@@ -84,7 +84,7 @@ public class FoldingListAdapter extends ArrayAdapter<student_data> {
         viewHolder.Contentsubjects.setText(data.getContentSubjects());
 
         viewHolder.Standard.setText(data.getStandard());
-        viewHolder.ContentStandard.setText(data.getStandard());
+        viewHolder.ContentStandard.setText(data.getContentStandard());
 
         viewHolder.slots.setText(data.getSlots());
 

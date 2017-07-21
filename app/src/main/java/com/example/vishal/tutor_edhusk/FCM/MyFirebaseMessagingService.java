@@ -3,15 +3,6 @@ package com.example.vishal.tutor_edhusk.FCM;
 /**
  * Created by vishal on 25/06/17.
  */
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-import android.media.RingtoneManager;
-import android.net.Uri;
-import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -21,16 +12,11 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.example.vishal.tutor_edhusk.Contacted_student.MyApplication;
+import com.example.vishal.tutor_edhusk.Contacted_student.Selected_Application;
 import com.example.vishal.tutor_edhusk.R;
-import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.messaging.RemoteMessage;
-import com.example.vishal.tutor_edhusk.Contacted_student.MyApplication;
 import com.example.vishal.tutor_edhusk.DatabaseHandler.Notification_Database_Handler;
-import com.example.vishal.tutor_edhusk.Fragment.Notification_fragment;
 import com.example.vishal.tutor_edhusk.Model.Notification_model;
-import com.example.vishal.tutor_edhusk.R;
-import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.List;
 
@@ -70,7 +56,7 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
 
     //This method is only generating push notification
     private void sendNotification(String title, String messageBody) {
-        Intent intent = new Intent(this, MyApplication.class);
+        Intent intent = new Intent(this, Selected_Application.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_ONE_SHOT);

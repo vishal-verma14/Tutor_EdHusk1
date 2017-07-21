@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.vishal.tutor_edhusk">
+    package="com.example.vishal.tutor_edhusk">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -17,9 +17,9 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -27,21 +27,21 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Contacted_student.MyApplication"/>
+        <activity android:name=".Contacted_student.Selected_Application" />
 
         <service android:name=".FCM.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service android:name=".FCM.MyFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
@@ -50,21 +50,21 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".User_information_sub.Qualification"/>
-        <activity android:name=".User_information_sub.Bank_Detail"/>
+        <activity android:name=".User_information_sub.Qualification" />
+        <activity android:name=".User_information_sub.Bank_Detail" />
         <activity
             android:name=".User_information_sub.Expertise"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -72,74 +72,55 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_sports_fitness">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_skill">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Pre_primary_academics_expertise">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_1_5_academics_expertise">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_6_10_academics_expertise">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_academics_expertise">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_academics_expertise">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_pkg_academics.Class_11_Arts">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_pkg_academics.Class_12_Arts">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_pkg_academics.Class_12_Science">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_pkg_academics.Class_12_Commerce">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_pkg_academics.Class_11_Science">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_pkg_academics.Class_11_Commerce">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Art_and_Craft_hobbies">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Dance_hobbies">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Computer_Basics_hobbies">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Cooking_hobbies">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Instrument_hobbies">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Language_hobbies">
-        </activity>
-        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Vocals_hobbies">
-        </activity>
+        <activity android:name=".Expertise_directory.Expertise_academics" />
+        <activity android:name=".Expertise_directory.Expertise_sports_fitness" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_skill" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Pre_primary_academics_expertise" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_1_5_academics_expertise" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_6_10_academics_expertise" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_academics_expertise" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_academics_expertise" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_pkg_academics.Class_11_Arts" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_pkg_academics.Class_12_Arts" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_pkg_academics.Class_12_Science" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_12_pkg_academics.Class_12_Commerce" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_pkg_academics.Class_11_Science" />
+        <activity android:name=".Expertise_directory.Expertise_academics_sub.Class_11_pkg_academics.Class_11_Commerce" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Art_and_Craft_hobbies" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Dance_hobbies" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Computer_Basics_hobbies" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Cooking_hobbies" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Instrument_hobbies" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Language_hobbies" />
+        <activity android:name=".Expertise_directory.Expertise_hobbies_sub.Vocals_hobbies" />
         <activity
             android:name=".User_information"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".SliderWindow.Slider_Window_main">
-        </activity>
-        <activity android:name=".SliderWindow.Slider_welcome"
-                  android:label="@string/app_name"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".SliderWindow.Slider_Window_main" />
+        <activity
+            android:name=".SliderWindow.Slider_welcome"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".Fragment.Contacted_sub_Freament.Contacted_Pending" />
+        <activity android:name=".Fragment.Contacted_sub_Freament.Contacted_accepted"></activity>
     </application>
 
 </manifest>
